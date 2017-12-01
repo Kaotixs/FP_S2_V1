@@ -41,19 +41,23 @@ int main()
 			}
 
 			window.clear();
-			
+
 			//window.draw(shape);
 			window.draw(enemy1);
 			window.draw(enemy2);
 			window.draw(enemy3);
 			window.draw(enemy4);
 			window.draw(enemy5);
+
+			//window.draw(enemy1);
 			window.display();
+
 
 			enemy1.move(sf::Vector2f(0.1, speed));
 			enemy2.move(sf::Vector2f(0, speed));
 			enemy3.move(sf::Vector2f(0, speed));
-			enemy4.move(sf::Vector2f(-0.1, speed));
+			enemy4.move(sf::Vector2f(0, speed));
+			enemy4.move(sf::Vector2f(0, -0.1));
 			enemy5.move(sf::Vector2f(0, speed));
 		//}
 		//last_time = realtime;
