@@ -8,7 +8,7 @@ int main()
 	time_t realtime;
 	long int last_time = 0;
 	float speed = 0.25;
-	sf::RenderWindow window(sf::VideoMode(720, 950), "Space Andies");
+	sf::RenderWindow window(sf::VideoMode(720, 900), "Space Andies");
 	
 	Enemies enemy1(sf::Color::Red, sf::Vector2f(30,20), sf::Vector2f(0, 0));
 	Enemies enemy2(sf::Color::Cyan, sf::Vector2f(30, 20), sf::Vector2f(200, 0));
@@ -18,6 +18,7 @@ int main()
 	//sf::CircleShape shape(10.f);
 	//shape.setFillColor(sf::Color::Cyan);
 
+	Enemies g;
 	
 	
 	while (window.isOpen())
@@ -53,11 +54,10 @@ int main()
 			window.display();
 
 
-			enemy1.move(sf::Vector2f(0.1, speed));
+			enemy1.move(sf::Vector2f(0, speed));
 			enemy2.move(sf::Vector2f(0, speed));
 			enemy3.move(sf::Vector2f(0, speed));
 			enemy4.move(sf::Vector2f(0, speed));
-			enemy4.move(sf::Vector2f(0, -0.1));
 			enemy5.move(sf::Vector2f(0, speed));
 		//}
 		//last_time = realtime;
